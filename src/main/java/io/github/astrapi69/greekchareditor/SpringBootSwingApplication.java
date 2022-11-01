@@ -20,34 +20,19 @@
  */
 package io.github.astrapi69.greekchareditor;
 
-import java.awt.*;
-import java.io.File;
-
-import javax.swing.*;
-
-import de.alpharogroup.layout.CloseWindow;
-import de.alpharogroup.model.BaseModel;
-import de.alpharogroup.model.api.Model;
-import de.alpharogroup.swing.base.BasePanel;
-import de.alpharogroup.swing.plaf.LookAndFeels;
-import de.alpharogroup.swing.splashscreen.BaseSplashScreen;
-import de.alpharogroup.swing.splashscreen.SplashScreenModelBean;
-import de.alpharogroup.throwable.ThrowableExtensions;
-import io.github.astrapi69.greekchareditor.panels.MainPanel;
+import io.github.astrapi69.model.BaseModel;
+import io.github.astrapi69.model.api.IModel;
+import io.github.astrapi69.swing.splashscreen.BaseSplashScreen;
+import io.github.astrapi69.swing.splashscreen.SplashScreenModelBean;
+import io.github.astrapi69.throwable.RuntimeExceptionDecorator;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.experimental.FieldDefaults;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import de.alpharogroup.layout.ScreenSizeExtensions;
-import de.alpharogroup.swing.base.ApplicationFrame;
-import de.alpharogroup.swing.base.BaseDesktopMenu;
-import de.alpharogroup.swing.components.factories.JComponentFactory;
-import de.alpharogroup.swing.panels.output.ConsolePanel;
-import de.alpharogroup.swing.utils.JInternalFrameExtensions;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.experimental.FieldDefaults;
+import java.awt.EventQueue;
 
 /**
  * The class {@link SpringBootSwingApplication}
@@ -56,23 +41,10 @@ import lombok.experimental.FieldDefaults;
 @SpringBootApplication
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class SpringBootSwingApplication extends ApplicationPanelFrame<ApplicationModelBean>
+public class SpringBootSwingApplication extends CharEditorApplicationFrame
 {
 
 	public static ConfigurableApplicationContext ctx;
-
-	/** The instance. */
-	private static SpringBootSwingApplication instance;
-
-	/**
-	 * Gets the single instance of SpringBootSwingApplication.
-	 *
-	 * @return single instance of SpringBootSwingApplication
-	 */
-	public static SpringBootSwingApplication getInstance()
-	{
-		return instance;
-	}
 
 	/**
 	 * The main method that start this {@link SpringBootSwingApplication}
@@ -88,14 +60,13 @@ public class SpringBootSwingApplication extends ApplicationPanelFrame<Applicatio
 		imagePath = Messages.getString("global.icon.app.path");
 		text = Messages.getString("mainframe.project.name");
 		SplashScreenModelBean splashScreenModelBean = SplashScreenModelBean.builder()
-		.imagePath(imagePath).text(text).min(0).max(100).showTime(3000)
-		.showing(true).build();
-			new Thread(()->{
-			Model<SplashScreenModelBean> modelBeanModel = BaseModel.of(splashScreenModelBean);
-				new BaseSplashScreen(null, modelBeanModel);
+			.imagePath(imagePath).text(text).min(0).max(100).showTime(3000).showing(true).build();
+		new Thread(() -> {
+			IModel<SplashScreenModelBean> modelBeanModel = BaseModel.of(splashScreenModelBean);
+			new BaseSplashScreen(null, modelBeanModel);
 		}).start();
 
-		ThrowableExtensions.toRuntimeExceptionIfNeeded(i -> Thread.sleep(splashScreenModelBean.getShowTime()));
+		RuntimeExceptionDecorator.decorate(i -> Thread.sleep(splashScreenModelBean.getShowTime()));
 
 		ConfigurableApplicationContext ctx = new SpringApplicationBuilder(
 			SpringBootSwingApplication.class).headless(false).run(args);
@@ -107,70 +78,4 @@ public class SpringBootSwingApplication extends ApplicationPanelFrame<Applicatio
 		});
 	}
 
-	public static final String TITLE = gr.frame.Messages
-			.getString("TransformerJFrame.title"); //$NON-NLS-1$
-
-	public static final String ISO_8859_7 = gr.frame.Messages
-			.getString("TransformerJFrame.iso8859_7"); //$NON-NLS-1$
-
-	public static final String[] columnNames = {
-			gr.frame.Messages.getString("TransformerJFrame.column.greek"), gr.frame.Messages.getString("TransformerJFrame.column.latin"), gr.frame.Messages.getString("TransformerJFrame.column.htmlentitys"), ISO_8859_7}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-
-	/**
-	 * Instantiates a new main frame.
-	 */
-	public SpringBootSwingApplication()
-	{
-		super(Messages.getString("mainframe.title"));
-	}
-
-	@Override
-	protected File newConfigurationDirectory(final @NonNull String parent,
-		final @NonNull String child)
-	{
-		String configurationDirectoryName = "greekchareditor";
-		File applicationConfigurationDirectory = new File(
-			super.newConfigurationDirectory(parent, child), configurationDirectoryName);
-		if (!applicationConfigurationDirectory.exists())
-		{
-			applicationConfigurationDirectory.mkdir();
-		}
-		return applicationConfigurationDirectory;
-	}
-
-	@Override
-	protected BaseDesktopMenu newDesktopMenu(@NonNull Component applicationFrame)
-	{
-		return new DesktopMenu(applicationFrame);
-	}
-
-	@Override
-	protected String newIconPath()
-	{
-		return Messages.getString("global.icon.app.path");
-	}
-
-	@Override
-	protected void onAfterInitialize()
-	{
-		super.onAfterInitialize();
-
-		if (instance == null)
-		{
-			instance = this;
-		}
-		setTitle(Messages.getString("mainframe.title"));
-	}
-
-	@Override
-	protected LookAndFeels newLookAndFeels()
-	{
-		return LookAndFeels.METAL;
-	}
-
-
-	@Override
-	protected BasePanel<ApplicationModelBean> newMainComponent() {
-		return new MainPanel();
-	}
 }

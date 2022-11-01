@@ -20,7 +20,9 @@
  */
 package io.github.astrapi69.greekchareditor;
 
+import io.github.astrapi69.greekchareditor.model.AlphabetLetter;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -28,6 +30,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
+
+import java.util.List;
 
 /**
  * The class {@link ApplicationModelBean} holds application specific data
@@ -37,9 +41,11 @@ import lombok.experimental.FieldDefaults;
 @EqualsAndHashCode
 @ToString
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 @Builder(toBuilder = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ApplicationModelBean
 {
+	List<AlphabetLetter> alphabet;
+	String[] columnNames;
 }

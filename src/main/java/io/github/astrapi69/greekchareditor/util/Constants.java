@@ -1,6 +1,7 @@
 package io.github.astrapi69.greekchareditor.util;
 
-public interface Constants {
+public interface Constants
+{
 
 	/** The Constant HTMLENTITY_UNDERSCORE. */
 	static final String HTMLENTITY_UNDERSCORE = "&#95;";
@@ -24,7 +25,7 @@ public interface Constants {
 	/** The Constant SEMICOLON. */
 	static final String SEMICOLON = ";";
 
-    static final String INFO_TITLE = "Info";
+	static final String INFO_TITLE = "Info";
 	static final String LICENCE_TITLE = "Licence";
 	static final String HELP_TITLE = "Hilfe";
 	static final String LOOK_AND_FEEL_WINDOWS = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";

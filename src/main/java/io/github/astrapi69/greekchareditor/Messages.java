@@ -24,6 +24,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
+import io.github.astrapi69.resourcebundle.locale.ResourceBundleExtensions;
 import lombok.experimental.UtilityClass;
 import lombok.extern.java.Log;
 
@@ -61,4 +62,15 @@ public class Messages
 		}
 	}
 
+	/**
+	 * Gets the string.
+	 *
+	 * @param key
+	 *            the key
+	 * @return the string
+	 */
+	public static String getString(final String key, final String defaultValue)
+	{
+		return ResourceBundleExtensions.getStringQuietly(RESOURCE_BUNDLE, key, defaultValue);
+	}
 }

@@ -1,7 +1,7 @@
 package io.github.astrapi69.greekchareditor;
 
-import de.alpharogroup.swing.base.AbstractApplicationFrame;
-import de.alpharogroup.swing.base.BasePanel;
+import io.github.astrapi69.swing.base.AbstractApplicationFrame;
+import io.github.astrapi69.swing.base.BasePanel;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

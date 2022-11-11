@@ -1,19 +1,19 @@
 package io.github.astrapi69.greekchareditor.util;
 
-import com.thoughtworks.xstream.XStream;
 import io.github.astrapi69.file.create.FileFactory;
 import io.github.astrapi69.file.create.FileInfo;
 import io.github.astrapi69.file.read.ReadFileExtensions;
 import io.github.astrapi69.file.search.PathFinder;
 import io.github.astrapi69.greekchareditor.model.AlphabetLetter;
 import io.github.astrapi69.throwable.RuntimeExceptionDecorator;
-import io.github.astrapi69.xstream.XmlToObjectExtensions;
-import io.github.astrapi69.xstream.factory.XStreamFactory;
+import io.github.astrapi69.xml.jackson.XmlToObjectExtensions;
+import io.github.astrapi69.xml.jackson.factory.JavaTypeFactory;
 import lombok.NonNull;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,11 +31,9 @@ public class AlphabetLoader
 		String lqSimpleName = AlphabetLetter.class.getSimpleName().toLowerCase();
 		aliases.put(lqSimpleName, AlphabetLetter.class);
 
-		XStream xStream = XStreamFactory.initializeXStream(new XStream(), aliases);
-		xStream
-			.allowTypesByWildcard(new String[] { "io.github.astrapi69.greekchareditor.model.**", });
 		String xml = ReadFileExtensions.readFromFile(xmlFile, Charset.forName("UTF-8"));
-		alphabet = XmlToObjectExtensions.toObject(xStream, xml, aliases);
+		alphabet = RuntimeExceptionDecorator.decorate(() -> XmlToObjectExtensions.toObject(xml,
+			JavaTypeFactory.newCollectionType(ArrayList.class, AlphabetLetter.class)));
 		return alphabet;
 	}
 
@@ -47,12 +45,11 @@ public class AlphabetLoader
 		String lqSimpleName = AlphabetLetter.class.getSimpleName().toLowerCase();
 		aliases.put(lqSimpleName, AlphabetLetter.class);
 
-		XStream xStream = XStreamFactory.initializeXStream(new XStream(), aliases);
-		xStream
-			.allowTypesByWildcard(new String[] { "io.github.astrapi69.greekchareditor.model.**", });
 		String xml = RuntimeExceptionDecorator
 			.decorate(() -> ReadFileExtensions.readFromFile(xmlFile, Charset.forName("UTF-8")));
-		alphabet = XmlToObjectExtensions.toObject(xStream, xml, aliases);
+
+		alphabet = RuntimeExceptionDecorator.decorate(() -> XmlToObjectExtensions.toObject(xml,
+			JavaTypeFactory.newCollectionType(ArrayList.class, AlphabetLetter.class)));
 		return alphabet;
 	}
 

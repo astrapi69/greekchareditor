@@ -1,416 +1,416 @@
-<list>
-  <alphabetletter>
+<ArrayList>
+  <item>
     <utf8>Α</utf8>
     <latin>A</latin>
     <html>&amp;#913;</html>
     <iso>Á</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ά</utf8>
     <latin>_A</latin>
     <html>&amp;#902;</html>
     <iso>¶</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Β</utf8>
     <latin>B</latin>
     <html>&amp;#914;</html>
     <iso>Â</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Γ</utf8>
     <latin>G</latin>
     <html>&amp;#915;</html>
     <iso>Ã</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Δ</utf8>
     <latin>D</latin>
     <html>&amp;#916;</html>
     <iso>Ä</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ε</utf8>
     <latin>E</latin>
     <html>&amp;#917;</html>
     <iso>Å</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Έ</utf8>
     <latin>_E</latin>
     <html>&amp;#904;</html>
     <iso>¸</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ζ</utf8>
     <latin>Z</latin>
     <html>&amp;#918;</html>
     <iso>Æ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Η</utf8>
     <latin>H</latin>
     <html>&amp;#919;</html>
     <iso>Ç</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ή</utf8>
     <latin>_H</latin>
     <html>&amp;#905;</html>
     <iso>¹</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Θ</utf8>
     <latin>Q</latin>
     <html>&amp;#920;</html>
     <iso>È</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ι</utf8>
     <latin>I</latin>
     <html>&amp;#921;</html>
     <iso>É</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ί</utf8>
     <latin>_I</latin>
     <html>&amp;#906;</html>
     <iso>º</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ϊ</utf8>
     <latin>:I</latin>
     <html>&amp;#938;</html>
     <iso>Ú</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Κ</utf8>
     <latin>K</latin>
     <html>&amp;#922;</html>
     <iso>Ê</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Λ</utf8>
     <latin>L</latin>
     <html>&amp;#923;</html>
     <iso>Ë</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Μ</utf8>
     <latin>M</latin>
     <html>&amp;#924;</html>
     <iso>Ì</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ν</utf8>
     <latin>N</latin>
     <html>&amp;#925;</html>
     <iso>Í</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ξ</utf8>
     <latin>_K</latin>
     <html>&amp;#926;</html>
     <iso>Î</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ο</utf8>
     <latin>O</latin>
     <html>&amp;#927;</html>
     <iso>Ï</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ό</utf8>
     <latin>_O</latin>
     <html>&amp;#908;</html>
     <iso>¼</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Π</utf8>
     <latin>P</latin>
     <html>&amp;#928;</html>
     <iso>Ð</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ρ</utf8>
     <latin>R</latin>
     <html>&amp;#929;</html>
     <iso>Ñ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Σ</utf8>
     <latin>S</latin>
     <html>&amp;#931;</html>
     <iso>Ó</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Τ</utf8>
     <latin>T</latin>
     <html>&amp;#932;</html>
     <iso>Ô</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Υ</utf8>
     <latin>Y</latin>
     <html>&amp;#933;</html>
     <iso>Õ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ύ</utf8>
     <latin>_Y</latin>
     <html>&amp;#910;</html>
     <iso>¾</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ϋ</utf8>
     <latin>:Y</latin>
     <html>&amp;#939;</html>
     <iso>Û</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Φ</utf8>
     <latin>F</latin>
     <html>&amp;#934;</html>
     <iso>Ö</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Χ</utf8>
     <latin>X</latin>
     <html>&amp;#935;</html>
     <iso>×</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ψ</utf8>
     <latin>_P</latin>
     <html>&amp;#936;</html>
     <iso>Ø</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ω</utf8>
     <latin>W</latin>
     <html>&amp;#937;</html>
     <iso>Ù</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>Ώ</utf8>
     <latin>_W</latin>
     <html>&amp;#911;</html>
     <iso>¿</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>α</utf8>
     <latin>a</latin>
     <html>&amp;#945;</html>
     <iso>á</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ά</utf8>
     <latin>_a</latin>
     <html>&amp;#940;</html>
     <iso>Ü</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>β</utf8>
     <latin>b</latin>
     <html>&amp;#946;</html>
     <iso>â</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>γ</utf8>
     <latin>g</latin>
     <html>&amp;#947;</html>
     <iso>ã</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>δ</utf8>
     <latin>d</latin>
     <html>&amp;#948;</html>
     <iso>ä</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ε</utf8>
     <latin>e</latin>
     <html>&amp;#949;</html>
     <iso>å</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>έ</utf8>
     <latin>_e</latin>
     <html>&amp;#941;</html>
     <iso>Ý</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ζ</utf8>
     <latin>z</latin>
     <html>&amp;#950;</html>
     <iso>æ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>η</utf8>
     <latin>h</latin>
     <html>&amp;#951;</html>
     <iso>ç</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ή</utf8>
     <latin>_h</latin>
     <html>&amp;#942;</html>
     <iso>Þ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>θ</utf8>
     <latin>q</latin>
     <html>&amp;#952;</html>
     <iso>è</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ι</utf8>
     <latin>i</latin>
     <html>&amp;#953;</html>
     <iso>é</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ί</utf8>
     <latin>_i</latin>
     <html>&amp;#943;</html>
     <iso>ß</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ϊ</utf8>
     <latin>:i</latin>
     <html>&amp;#970;</html>
     <iso>ú</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ΐ</utf8>
     <latin>:_i</latin>
     <html>&amp;#912;</html>
     <iso>À</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>κ</utf8>
     <latin>k</latin>
     <html>&amp;#954;</html>
     <iso>ê</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>λ</utf8>
     <latin>l</latin>
     <html>&amp;#955;</html>
     <iso>ë</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>μ</utf8>
     <latin>m</latin>
     <html>&amp;#956;</html>
     <iso>ì</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ν</utf8>
     <latin>n</latin>
     <html>&amp;#957;</html>
     <iso>í</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ξ</utf8>
     <latin>_k</latin>
     <html>&amp;#958;</html>
     <iso>î</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ο</utf8>
     <latin>o</latin>
     <html>&amp;#959;</html>
     <iso>ï</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ό</utf8>
     <latin>_o</latin>
     <html>&amp;#972;</html>
     <iso>ü</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>π</utf8>
     <latin>p</latin>
     <html>&amp;#960;</html>
     <iso>ð</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ρ</utf8>
     <latin>r</latin>
     <html>&amp;#961;</html>
     <iso>ñ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>σ</utf8>
     <latin>s</latin>
     <html>&amp;#963;</html>
     <iso>ó</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ς</utf8>
     <latin>_s</latin>
     <html>&amp;#962;</html>
     <iso>ò</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>τ</utf8>
     <latin>t</latin>
     <html>&amp;#964;</html>
     <iso>ô</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>υ</utf8>
     <latin>y</latin>
     <html>&amp;#965;</html>
     <iso>õ</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ύ</utf8>
     <latin>_y</latin>
     <html>&amp;#973;</html>
     <iso>ý</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ϋ</utf8>
     <latin>:y</latin>
     <html>&amp;#971;</html>
     <iso>û</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ΰ</utf8>
     <latin>:_y</latin>
     <html>&amp;#944;</html>
     <iso>à</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>φ</utf8>
     <latin>f</latin>
     <html>&amp;#966;</html>
     <iso>ö</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>χ</utf8>
     <latin>x</latin>
     <html>&amp;#967;</html>
     <iso>÷</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ψ</utf8>
     <latin>_p</latin>
     <html>&amp;#968;</html>
     <iso>ø</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ω</utf8>
     <latin>w</latin>
     <html>&amp;#969;</html>
     <iso>ù</iso>
-  </alphabetletter>
-  <alphabetletter>
+  </item>
+  <item>
     <utf8>ώ</utf8>
     <latin>_w</latin>
     <html>&amp;#974;</html>
     <iso>þ</iso>
-  </alphabetletter>
-</list>
+  </item>
+</ArrayList>

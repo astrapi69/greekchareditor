@@ -336,7 +336,7 @@ public class GreekAlphabetUtil
 	 *            The Latin-mappers String to be converted.
 	 * @return The converted String in HTML Entitys.
 	 */
-	public static String convertLatinToHTML_Entitys(String input)
+	public static String convertLatinToHtmlEntitys(String input)
 	{
 		Properties latin2Gr4HTML = GreekAlphabetUtil.getLatin2GrHTMLEntitys();
 		StringBuffer outputhtmlChars = new StringBuffer();

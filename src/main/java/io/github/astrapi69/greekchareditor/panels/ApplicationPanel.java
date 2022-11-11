@@ -1,5 +1,6 @@
 package io.github.astrapi69.greekchareditor.panels;
 
+import io.github.astrapi69.greekchareditor.ApplicationModelBean;
 import io.github.astrapi69.greekchareditor.Messages;
 import io.github.astrapi69.greekchareditor.action.HtmlEntitysTATransformAction;
 import io.github.astrapi69.greekchareditor.action.InputTAClearAction;
@@ -10,7 +11,6 @@ import io.github.astrapi69.greekchareditor.action.InputTATranformAction;
 import io.github.astrapi69.greekchareditor.action.Iso8859_7TATransformAction;
 import io.github.astrapi69.greekchareditor.action.PreviewTATransformAction;
 import io.github.astrapi69.greekchareditor.action.UnicodeTATransformAction;
-import io.github.astrapi69.greekchareditor.ApplicationModelBean;
 import io.github.astrapi69.greekchareditor.model.AlphabetLetter;
 import io.github.astrapi69.greekchareditor.util.AlphabetLoader;
 import io.github.astrapi69.model.BaseModel;
@@ -18,7 +18,6 @@ import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.BasePanel;
 import io.github.astrapi69.swing.menu.KeyStrokeExtensions;
 import io.github.astrapi69.swing.table.GenericJXTable;
-import io.github.astrapi69.swing.table.model.BaseTableModel;
 import io.github.astrapi69.swing.table.model.TableColumnsModel;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -533,30 +532,9 @@ public class ApplicationPanel extends BasePanel<ApplicationModelBean>
 			.canEdit(new boolean[] { false, false, false, false }).columnClasses(
 				new Class<?>[] { String.class, String.class, String.class, String.class })
 			.build();
-		BaseTableModel<AlphabetLetter> tableModel = new BaseTableModel<AlphabetLetter>(alphabet,
-			tableColumnsModel)
-		{
-			@Override
-			public Object getValueAt(int rowIndex, int columnIndex)
-			{
-				AlphabetLetter row = getData().get(rowIndex);
-				switch (columnIndex)
-				{
-					case 0 :
-						return row.getUtf8();
-					case 1 :
-						return row.getLatin();
-					case 2 :
-						return row.getHtml();
-					case 3 :
-						return row.getIso();
-					default :
-						return null;
-				}
-			}
-		};
+		AlphabetLetterTableModel tableModel = new AlphabetLetterTableModel(alphabet,
+			tableColumnsModel);
 		jTableAlphabet = new GenericJXTable<>(tableModel);
-		// new JTable(ArmenianAlphabet.armenianAlphabet, armenianColumnNames);
 	}
 
 	private void createAllJLabels()

@@ -2,7 +2,9 @@ package io.github.astrapi69.greekchareditor;
 
 import io.github.astrapi69.file.create.DirectoryFactory;
 import io.github.astrapi69.greekchareditor.panels.ApplicationPanel;
+import io.github.astrapi69.greekchareditor.util.AlphabetLoader;
 import io.github.astrapi69.model.BaseModel;
+import io.github.astrapi69.model.api.IModel;
 import io.github.astrapi69.swing.base.ApplicationPanelFrame;
 import io.github.astrapi69.swing.base.BaseDesktopMenu;
 import io.github.astrapi69.swing.base.BasePanel;
@@ -51,8 +53,10 @@ public class CharEditorApplicationFrame extends ApplicationPanelFrame<Applicatio
 	@Override
 	protected BasePanel<ApplicationModelBean> newMainComponent()
 	{
-		ApplicationPanel applicationPanel = new ApplicationPanel();
-		setModel(applicationPanel.getModel());
+		setModel(BaseModel
+			.of(ApplicationModelBean.builder().columnNames(ApplicationPanel.greekColumnNames)
+				.alphabet(AlphabetLoader.loadHelenicAlphabet()).build()));
+		ApplicationPanel applicationPanel = new ApplicationPanel(getModel());
 		return applicationPanel;
 	}
 
@@ -87,7 +91,6 @@ public class CharEditorApplicationFrame extends ApplicationPanelFrame<Applicatio
 		jfileChooser = new JFileChooser();
 		applicationPanel = (ApplicationPanel)getMainComponent();
 		setTitle(Messages.getString("mainframe.title"));
-		setDefaultLookAndFeel(LookAndFeels.NIMBUS, this);
 		this.setSize(ScreenSizeExtensions.getScreenWidth(), ScreenSizeExtensions.getScreenHeight());
 	}
 
@@ -108,7 +111,7 @@ public class CharEditorApplicationFrame extends ApplicationPanelFrame<Applicatio
 	@Override
 	protected LookAndFeels newLookAndFeels()
 	{
-		return LookAndFeels.METAL;
+		return LookAndFeels.NIMBUS;
 	}
 
 }

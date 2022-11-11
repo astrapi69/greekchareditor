@@ -12,6 +12,7 @@
 		<!-- pre-select desktop shortcut checkbox -->
 		<variable name="DesktopShortcutCheckboxEnabled" value="true" />
 	</variables>
+
 	<info>
 		<javaversion>1.8</javaversion>
 		<appname>greekchareditor</appname>

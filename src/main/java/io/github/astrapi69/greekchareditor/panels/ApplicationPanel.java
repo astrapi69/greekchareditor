@@ -36,7 +36,6 @@ import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.KeyEvent;
 import java.util.List;
 
 @Getter
@@ -471,9 +470,9 @@ public class ApplicationPanel extends BasePanel<ApplicationModelBean>
 			.addActionListener(inputTACopyIso_GreekChars_ToClipboardAction);
 
 		KeyStrokeExtensions.addShortcutToComponent(jbutInputTACopyIso_GreekChars_ToClipboard,
-			KeyStroke.getKeyStroke(KeyEvent.VK_D, KeyEvent.CTRL_MASK + KeyEvent.ALT_MASK),
-			acInputTACopyIso_GreekChars_ToClipboardAction,
-			inputTACopyIso_GreekChars_ToClipboardAction);
+				KeyStroke.getKeyStroke("ctrl alt pressed D"),
+				acInputTACopyIso_GreekChars_ToClipboardAction,
+				inputTACopyIso_GreekChars_ToClipboardAction);
 
 
 	}
@@ -526,7 +525,6 @@ public class ApplicationPanel extends BasePanel<ApplicationModelBean>
 	private void createJTable()
 	{
 		List<AlphabetLetter> alphabet = getModelObject().getAlphabet();
-		getModelObject().getColumnNames();
 		TableColumnsModel tableColumnsModel = TableColumnsModel.builder()
 			.columnNames(getModelObject().getColumnNames())
 			.canEdit(new boolean[] { false, false, false, false }).columnClasses(
